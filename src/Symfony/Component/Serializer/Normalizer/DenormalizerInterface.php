@@ -27,6 +27,13 @@ interface DenormalizerInterface
      * @param array  $context options available to the denormalizer
      *
      * @return object
+     *
+     * @throws \Symfony\Component\Serializer\Exception\BadMethodCallException
+     * @throws \Symfony\Component\Serializer\Exception\InvalidArgumentException
+     * @throws \Symfony\Component\Serializer\Exception\UnexpectedValueException
+     * @throws \Symfony\Component\Serializer\Exception\ExtraAttributesException
+     * @throws \Symfony\Component\Serializer\Exception\LogicException
+     * @throws \Symfony\Component\Serializer\Exception\RuntimeException
      */
     public function denormalize($data, $class, $format = null, array $context = array());
 

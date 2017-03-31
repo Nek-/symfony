@@ -26,6 +26,10 @@ interface NormalizerInterface
      * @param array  $context Context options for the normalizer
      *
      * @return array|scalar
+     *
+     * @throws \Symfony\Component\Serializer\Exception\InvalidArgumentException
+     * @throws \Symfony\Component\Serializer\Exception\LogicException
+     * @throws \Symfony\Component\Serializer\Exception\CircularReferenceException
      */
     public function normalize($object, $format = null, array $context = array());
 
